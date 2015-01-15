@@ -266,7 +266,11 @@ public class BunkerLot extends ConnectedLot {
 		case BALLSY:
 			return generateBallsyBunker(generator, context, chunk, odds, yPlatform + 1, yPlatformTop);
 		case ENTRY:
-			return generateEntryBunker(generator, context, chunk, odds, yPlatform + 1, yPlatformTop, yTop2, surfaceY);
+			if (generator.settings.includeDecayedNature) {
+				return generatePyramidBunker(generator, context, chunk, odds, yPlatform + 1, yPlatformTop);
+			} else {
+				return generateEntryBunker(generator, context, chunk, odds, yPlatform + 1, yPlatformTop, yTop2, surfaceY);
+			}
 		case FLOORED:
 			return generateFlooredBunker(generator, context, chunk, odds, yPlatform + 1, yPlatformTop);
 		case GROWING:
