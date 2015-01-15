@@ -7,7 +7,7 @@ import me.daddychurchill.CityWorld.Support.SupportChunk;
 public class CoverProvider_Decayed extends CoverProvider {
 	
 	private double oddsOfCrop = Odds.oddsLikely;
-	private double oddsOfCactus = Odds.oddsEffinUnlikely;
+	private double oddsOfCactus = Odds.oddsNearlyNeverGoingToHappen;
 	
 	public CoverProvider_Decayed(Odds odds) {
 		super(odds);
@@ -60,6 +60,8 @@ public class CoverProvider_Decayed extends CoverProvider {
 				if (generator.settings.includeDecayedNature)  {
 					if (odds.playOdds(oddsOfCactus)) {
 						super.setCoverage(generator, chunk, x, y, z, CoverageType.CACTUS);
+					} else {
+						super.setCoverage(generator, chunk, x, y, z, CoverageType.DEAD_BUSH);
 					}
 				} else {
 					super.setCoverage(generator, chunk, x, y, z, CoverageType.DEAD_BUSH);
