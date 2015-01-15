@@ -141,6 +141,10 @@ public class ShapeProvider_SandDunes extends ShapeProvider_Normal {
 		if (y > subsurfaceY) {
 			chunk.setBlocks(x, subsurfaceY, y - 2, z, Material.SANDSTONE);
 			chunk.setBlocks(x, y - 2, y, z, Material.SAND);
+			if (odds.getRandomDouble() < .02) {
+				chunk.setBlocks(x, y - 6, y - 3, z, Material.LOG);
+			}
+				
 		}
 	}
 	

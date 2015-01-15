@@ -44,7 +44,7 @@ public class ShapeProvider_SnowDunes extends ShapeProvider_Normal {
 	public ShapeProvider_SnowDunes(WorldGenerator generator, Odds odds) {
 		super(generator, odds);
 		
-		floodY = seaLevel + 15;
+		floodY = seaLevel + 8;
 
 		long seed = generator.getWorldSeed();
 		duneFeature1 = new SimplexOctaveGenerator(seed + 20, featureOctaves);
@@ -174,6 +174,9 @@ public class ShapeProvider_SnowDunes extends ShapeProvider_Normal {
 		int snowY = findFloodY(generator, chunk.getBlockX(x), chunk.getBlockZ(z));
 		if (snowY > baseY) 
 			chunk.setBlocks(x, baseY, snowY, z, Material.SNOW_BLOCK);
+			if (odds.getRandomDouble() < .02) {
+				chunk.setBlocks(x, y - 6, y - 3, z, Material.LOG);
+			}
 	}
 	
 	@Override
@@ -194,7 +197,7 @@ public class ShapeProvider_SnowDunes extends ShapeProvider_Normal {
 					int snowAmount = NoiseGenerator.floor((snowCoverY - Math.floor(snowCoverY)) * 8.0);
 					if (snowAmount > 3 & !chunk.isType(x, snowY - 1, z, Material.SNOW_BLOCK))
 						snowAmount = 7 - snowAmount;
-					chunk.setSnowCover(x, snowY, z, snowAmount);
+					// chunk.setSnowCover(x, snowY, z, snowAmount);
 				}
 			}
 		}

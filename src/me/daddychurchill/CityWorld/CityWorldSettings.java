@@ -506,16 +506,16 @@ public class CityWorldSettings {
 		case SANDDUNES:
 //			includeRoads = true;
 			includeRoundabouts = false; // DIFFERENT
-			includeSewers = false; // DIFFERENT
+//			includeSewers = false; // DIFFERENT
 //			includeCisterns = true;
 //			includeBasements = true;
-			includeMines = false; // DIFFERENT
-			includeBunkers = false; // DIFFERENT
+//			includeMines = false; // DIFFERENT
+//			includeBunkers = false; // DIFFERENT
 //			includeBuildings = true;
 //			includeHouses = true;
 //			includeFarms = true;
 
-			includeCaves = false; // DIFFERENT
+//			includeCaves = false; // DIFFERENT
 			includeLavaFields = false; // DIFFERENT
 			includeSeas = true; // THIS MUST BE SET TO TRUE
 			includeMountains = true; // THIS MUST BE SET TO TRUE
@@ -541,27 +541,27 @@ public class CityWorldSettings {
 		case SNOWDUNES:
 //			includeRoads = true;
 			includeRoundabouts = false; // DIFFERENT
-			includeSewers = false; // DIFFERENT
+//			includeSewers = false; // DIFFERENT
 //			includeCisterns = true;
 //			includeBasements = true;
-			includeMines = false; // DIFFERENT
-			includeBunkers = false; // DIFFERENT
+//			includeMines = false; // DIFFERENT
+//			includeBunkers = false; // DIFFERENT
 //			includeBuildings = true;
 //			includeHouses = true;
 //			includeFarms = true;
 
-			includeCaves = false; // DIFFERENT
+//			includeCaves = false; // DIFFERENT
 			includeLavaFields = false; // DIFFERENT
 			includeSeas = true; // THIS MUST BE SET TO TRUE
 			includeMountains = true; // THIS MUST BE SET TO TRUE
 //			includeOres = true;
 			
-			treasuresInSewers = false; // DIFFERENT
-			spawnersInSewers = false; // DIFFERENT
-			treasuresInMines = false; // DIFFERENT
-			spawnersInMines = false; // DIFFERENT
-			treasuresInBunkers = false; // DIFFERENT
-			spawnersInBunkers = false; // DIFFERENT
+//			treasuresInSewers = false; // DIFFERENT
+//			spawnersInSewers = false; // DIFFERENT
+//			treasuresInMines = false; // DIFFERENT
+//			spawnersInMines = false; // DIFFERENT
+//			treasuresInBunkers = false; // DIFFERENT
+//			spawnersInBunkers = false; // DIFFERENT
 			
 //			includeUndergroundFluids = false; 
 			includeAbovegroundFluids = true; // THIS MUST BE SET TO TRUE
@@ -570,7 +570,7 @@ public class CityWorldSettings {
 //			includeDecayedRoads = false;
 //			includeDecayedBuildings = false;
 //			includeDecayedNature = false;
-			includeBuildingInteriors = false; // DIFFERENT
+//			includeBuildingInteriors = false; // DIFFERENT
 			includeFloatingSubsurface = false; // DIFFERENT
 			break;
 		}

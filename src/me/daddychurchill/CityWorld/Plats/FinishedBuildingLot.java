@@ -417,7 +417,7 @@ public abstract class FinishedBuildingLot extends BuildingLot {
 		case 10:
 			return Material.CLAY;
 		case 11:
-			return Material.NETHERRACK;
+			return Material.NETHER_BRICK;
 		case 12:
 			return Material.SOUL_SAND;
 		case 13:
@@ -425,13 +425,13 @@ public abstract class FinishedBuildingLot extends BuildingLot {
 		case 14:
 			return Material.NETHER_BRICK;
 		case 15:
-			return Material.QUARTZ_BLOCK;
+			return Material.STONE;
 		case 16:
 			return Material.HARD_CLAY;
 		case 17:
 			return Material.STAINED_CLAY;
 		case 18:
-			return Material.COAL_BLOCK;
+			return Material.STONE;
 		case 19:
 			return Material.ENDER_STONE;
 		default:
@@ -458,7 +458,7 @@ public abstract class FinishedBuildingLot extends BuildingLot {
 		case 8:
 			return Material.CLAY;
 		case 9:
-			return Material.NETHERRACK;
+			return Material.NETHER_BRICK;
 		case 10:
 			return Material.SMOOTH_BRICK;
 		case 11:
@@ -470,7 +470,7 @@ public abstract class FinishedBuildingLot extends BuildingLot {
 		case 14:
 			return Material.STAINED_CLAY;
 		case 15:
-			return Material.COAL_BLOCK;
+			return Material.STONE;
 		case 16:
 			return Material.ENDER_STONE;
 		default:

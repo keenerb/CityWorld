@@ -271,7 +271,11 @@ public class FarmLot extends ConnectedLot {
 		}
 		
 		if (fallowField)
-			plowField(chunk, croplevel, dirtMaterial, 1, Material.AIR, 2);
+			if (generator.settings.includeDecayedNature) {
+				plowField(chunk, croplevel, Material.SANDSTONE, 1, Material.AIR, 2);
+			} else {
+				plowField(chunk, croplevel, dirtMaterial, 1, Material.AIR, 2);
+			}
 		else {
 		
 			switch (cropType) {
@@ -650,8 +654,6 @@ public class FarmLot extends ConnectedLot {
 		CropType.FALLOW,
 		CropType.TRELLIS,
 		CropType.DEAD_BUSH,
-		CropType.BROWN_MUSHROOM,
-		CropType.RED_MUSHROOM,
 		CropType.DECAY_PLANTS
 		};
 	
