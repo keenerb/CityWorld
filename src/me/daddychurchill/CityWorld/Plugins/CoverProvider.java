@@ -138,7 +138,6 @@ public abstract class CoverProvider extends Provider {
 		CoverageType.FIRE};
 	
 	private final static CoverageType[] DecayPlants = {
-		CoverageType.BROWN_MUSHROOM, CoverageType.RED_MUSHROOM,
 		CoverageType.DEAD_BUSH};
 	
 	protected final static double oddsOfDarkCover = Odds.oddsLikely;

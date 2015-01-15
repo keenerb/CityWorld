@@ -107,6 +107,8 @@ public class FarmLot extends ConnectedLot {
 	private final static Material isolationNormalMaterial = Material.LOG;
 	private final static Material isolationNetherMaterial = Material.NETHER_BRICK;
 	
+	private final static Material decayedDirtMaterial = Material.SAND;
+	private final static Material decayedWaterMaterial = Material.AIR;
 	private final static Material soilMaterial = Material.SOIL;
 	private final static Material sandMaterial = Material.SAND;
 	private final static Material mycelMaterial = Material.MYCEL;
@@ -209,7 +211,7 @@ public class FarmLot extends ConnectedLot {
 		case ALL_PLANTS:
 		case DECAY_PLANTS:
 			if (generator.settings.includeAbovegroundFluids)
-				plowField(chunk, croplevel, dirtMaterial, 2, waterMaterial, 2);
+				plowField(chunk, croplevel, decayedDirtMaterial, 2, decayedWaterMaterial, 2);
 			else 
 				fallowField = true;
 			break;
@@ -237,7 +239,10 @@ public class FarmLot extends ConnectedLot {
 				fallowField = true;
 			break;
 		case DEAD_BUSH:
-			plowField(chunk, croplevel, dirtMaterial, 1, fallowMaterial, 2);
+			if (generator.settings.includeDecayedNature)
+				plowField(chunk, croplevel, decayedDirtMaterial, 2, decayedWaterMaterial, 2);
+			else 
+				plowField(chunk, croplevel, dirtMaterial, 2, waterMaterial, 2);
 			break;
 		case WHEAT:
 		case CARROT:
